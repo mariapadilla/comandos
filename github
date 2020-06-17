@@ -17,6 +17,8 @@ GIT y GIT HUB
 	git config --global user.email "maria_aps@hotmail.com"
 	git config --list
 
+
+
 1.- Inicializando un repositorio en un directorio existente
 	Ingresar al directorio cd
 	git init
@@ -26,10 +28,15 @@ GIT y GIT HUB
 	$ git add LICENSE
 	$ git commit -m 'descripcion del paquete' 
 
+
+
 2.- Clonando un repositorio existente
 
 - Descargar repositorio, solo la primera vez
 	git clone url
+
+- acceder a la carpeta clonada cd 
+	git estatus 
 
 
 
@@ -41,24 +48,85 @@ GIT y GIT HUB
 
 
 
-- acceder a la carpeta clonada
-	git estatus 
+4.- comandos de git 
 
-- subir archivo 
-	git add archivo 
+
+- preparar archivos con cambios o nuevos 
+	git add archivo.ext o carpeta
+
+
+- Ver estatus de los archivos
+	git estatus
+
+
+- Ignorar archivos
+$ nano .gitignore
+*.[oa]
+*~
+
+- Eliminar Archivos
+	rm archivo.ext o carpeta
+
+
+- Cambiar el Nombre de los Archivos
+	git mv file_from file_to
  
+
+- Empaquetar cambios a subir / Confirmar tus Cambios
+	git commit -m "mensaje descriptivo de la version"
+
 
 - comparar archivos con cambios}
 - Este comando compara lo que tienes en tu directorio de trabajo con lo que está en el área de preparación. El resultado te indica los cambios que has hecho pero que aun no has preparado.
 	git diff
 
 
-- subir todos los archivos con cambios
-	git add .
+- Ver el Historial de Confirmaciones
+	git log
 
-- Empaquetar cambios a subir 
-	git commit -m "mensaje descriptivo de la version"
 
 - Subir paquetes commit 
 	git push
+
+- Deshacer Cosas
+	git commit --amend
+
+- Deshacer un Archivo Preparado
+	git reset HEAD archivo.ext
+
+
+- Deshacer un Archivo Modificado
+	git checkout -- CONTRIBUTING.md
+
+
+4.- Trabajar con Remotos
+- Ver Tus Remotos
+	git remote
+
+-  muestra las URLs que Git ha asociado al nombre y que serán usadas al leer y escribir en ese remoto
+	git remote -v
+
+- Añadir Repositorios Remotos
+	git remote add [nombre] [url]
+	git remote add pb https://github.com/paulboone/ticgit
+
+-  Traer y Combinar Remotos
+	git fetch [nombre]
+
+Si clonas un repositorio, el comando de clonar automáticamente añade ese repositorio remoto con el nombre “origin”. Por lo tanto, git fetch origin se trae todo el trabajo nuevo que ha sido enviado a ese servidor desde que lo clonaste (o desde la última vez que trajiste datos). Es importante destacar que el comando git fetch solo trae datos a tu repositorio local - ni lo combina automáticamente con tu trabajo ni modifica el trabajo que llevas hecho. La combinación con tu trabajo debes hacerla manualmente cuando estés listo.
+
+
+- Enviar a Tus Remotos
+	git push [nombre-remoto] [nombre-rama].
+	git push origin master
+
+
+
+
+
+
+
+
+
+
 
