@@ -1,19 +1,45 @@
 
-GIT HUB
+GIT y GIT HUB
 
-directorio de trabajo
-area temporal
-repositorio local (versiones de cambios)
-repositorio remoto (servidor remoto)
+- En que consiste 
+	directorio de trabajo
+	area de preparacion (staging area)
+	repositorio local (versiones de cambios)
+	repositorio remoto (servidor remoto)
 
-- descargar git 
+- Instalar Git
+	sudo apt update
+	sudo apt install git
+	git --version
+
+- Configurar Git
+	git config --global user.name "maria_aps"
+	git config --global user.email "maria_aps@hotmail.com"
+	git config --list
+
+1.- Inicializando un repositorio en un directorio existente
+	Ingresar al directorio cd
+	git init
+
+-- Controlar versiones de archivos existentes 
+	git add *.c
+	$ git add LICENSE
+	$ git commit -m 'descripcion del paquete' 
+
+2.- Clonando un repositorio existente
+
+- Descargar repositorio, solo la primera vez
+	git clone url
+
+
+
+3.- En Git Hub
 
 - crear repositorio
 
 - inicializar con un readme 
 
-- Descargar repositorio, solo la primera vez
-	git clone url
+
 
 - acceder a la carpeta clonada
 	git estatus 
@@ -22,7 +48,8 @@ repositorio remoto (servidor remoto)
 	git add archivo 
  
 
-- comparar archivos con cambios
+- comparar archivos con cambios}
+- Este comando compara lo que tienes en tu directorio de trabajo con lo que está en el área de preparación. El resultado te indica los cambios que has hecho pero que aun no has preparado.
 	git diff
 
 
