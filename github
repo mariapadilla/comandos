@@ -1,0 +1,37 @@
+
+GIT HUB
+
+directorio de trabajo
+area temporal
+repositorio local (versiones de cambios)
+repositorio remoto (servidor remoto)
+
+- descargar git 
+
+- crear repositorio
+
+- inicializar con un readme 
+
+- Descargar repositorio, solo la primera vez
+	git clone url
+
+- acceder a la carpeta clonada
+	git estatus 
+
+- subir archivo 
+	git add archivo 
+ 
+
+- comparar archivos con cambios
+	git diff
+
+
+- subir todos los archivos con cambios
+	git add .
+
+- Empaquetar cambios a subir 
+	git commit -m "mensaje descriptivo de la version"
+
+- Subir paquetes commit 
+	git push
+
