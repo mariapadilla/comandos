@@ -121,6 +121,17 @@ Si clonas un repositorio, el comando de clonar automáticamente añade ese repos
 	git push origin master
 
 
+- Inspeccionar un Remoto
+	git remote show [nombre-remoto]
+	git remote show origin
+
+- Eliminar y Renombrar Remotos
+- renombrar
+	git remote rename nombreViejo nombreNuevo
+
+- eliminar
+	git remote rm nombreRemoto
+
 
 
 
